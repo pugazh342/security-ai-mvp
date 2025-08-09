@@ -86,7 +86,7 @@ security-ai-mvp/
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/security-ai-mvp.git
+git clone https://github.com/pugazh342/security-ai-mvp.git
 cd security-ai-mvp
 ```
 
@@ -162,3 +162,4 @@ PRs welcome! This project is built for community collaboration.
 ---
 
 > **Built with ❤️ for the open-source security community**
+
