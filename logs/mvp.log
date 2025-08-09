@@ -1,0 +1,38 @@
+2025-08-09 11:13:31,113 - __main__ - INFO - [START] Starting Free AI-Powered Security MVP
+2025-08-09 11:13:31,113 - collectors.log_collector - INFO - [COLLECTOR] Starting log collector...
+2025-08-09 11:13:31,114 - collectors.log_collector - INFO - [COLLECTOR] Monitoring 1 log files.
+2025-08-09 11:21:03,596 - __main__ - INFO - [START] Starting Free AI-Powered Security MVP
+2025-08-09 11:21:03,597 - collectors.log_collector - INFO - [COLLECTOR] Starting log collector...
+2025-08-09 11:21:03,598 - collectors.log_collector - INFO - [COLLECTOR] Monitoring 1 log files.
+2025-08-09 11:21:03,600 - parser.log_parser - INFO - [PARSER] Loaded 4 log patterns.
+2025-08-09 13:08:40,968 - __main__ - INFO - [START] Starting Free AI-Powered Security MVP
+2025-08-09 13:08:40,972 - parser.log_parser - INFO - [PARSER] Loaded 4 log patterns.
+2025-08-09 13:08:40,974 - detection.sigma_engine - INFO - [SIGMA] Loaded rule: Multiple Failed Login Attempts (Brute Force) (ID: 1a2b3c4d-5e6f-7g8h-9i10-j11k12l13m14)
+2025-08-09 13:08:40,974 - detection.sigma_engine - INFO - [SIGMA] Total rules loaded: 1
+2025-08-09 13:11:25,093 - __main__ - INFO - [START] Starting Free AI-Powered Security MVP
+2025-08-09 13:11:25,097 - parser.log_parser - INFO - [PARSER] Loaded 4 log patterns.
+2025-08-09 13:11:25,099 - detection.sigma_engine - INFO - [SIGMA] Loaded rule: Multiple Failed Login Attempts (Brute Force) (ID: 1a2b3c4d-5e6f-7g8h-9i10-j11k12l13m14)
+2025-08-09 13:11:25,100 - detection.sigma_engine - INFO - [SIGMA] Total Sigma rules loaded: 1
+2025-08-09 13:11:25,100 - collectors.log_collector - INFO - [COLLECTOR] Starting log collector...
+2025-08-09 13:11:25,102 - collectors.log_collector - INFO - [COLLECTOR] Monitoring: ./logs/app.log
+2025-08-09 13:11:25,102 - collectors.log_collector - INFO - [COLLECTOR] Total files monitored: 1
+2025-08-09 13:14:35,669 - __main__ - INFO - [STOP] Shutting down MVP...
+2025-08-09 13:14:35,670 - collectors.log_collector - INFO - [COLLECTOR] Stopped log collector.
+2025-08-09 13:15:43,382 - __main__ - INFO - [START] Starting Free AI-Powered Security MVP
+2025-08-09 13:15:43,385 - parser.log_parser - INFO - [PARSER] Loaded 4 log patterns.
+2025-08-09 13:15:43,387 - detection.sigma_engine - INFO - [SIGMA] Loaded rule: Multiple Failed Login Attempts (Brute Force) (ID: 1a2b3c4d-5e6f-7g8h-9i10-j11k12l13m14)
+2025-08-09 13:15:43,388 - detection.sigma_engine - INFO - [SIGMA] Total Sigma rules loaded: 1
+2025-08-09 13:15:43,388 - collectors.log_collector - INFO - [COLLECTOR] Starting log collector...
+2025-08-09 13:15:43,389 - collectors.log_collector - INFO - [COLLECTOR] Monitoring: ./logs/app.log
+2025-08-09 13:15:43,389 - collectors.log_collector - INFO - [COLLECTOR] Total files monitored: 1
+2025-08-09 13:16:00,290 - __main__ - INFO - [STOP] Shutting down MVP...
+2025-08-09 13:16:00,290 - collectors.log_collector - INFO - [COLLECTOR] Stopped log collector.
+2025-08-09 13:26:48,636 - __main__ - INFO - [START] Starting Free AI-Powered Security MVP
+2025-08-09 13:26:48,640 - parser.log_parser - INFO - [PARSER] Loaded 4 log patterns.
+2025-08-09 13:26:48,642 - detection.sigma_engine - INFO - [SIGMA] Loaded rule: Multiple Failed Login Attempts (Brute Force) (ID: 1a2b3c4d-5e6f-7g8h-9i10-j11k12l13m14)
+2025-08-09 13:26:48,642 - detection.sigma_engine - INFO - [SIGMA] Total Sigma rules loaded: 1
+2025-08-09 13:26:48,642 - collectors.log_collector - INFO - [COLLECTOR] Starting log collector...
+2025-08-09 13:26:48,643 - collectors.log_collector - INFO - [COLLECTOR] Monitoring: ./logs/app.log
+2025-08-09 13:26:48,643 - collectors.log_collector - INFO - [COLLECTOR] Total files monitored: 1
+2025-08-09 15:10:48,404 - __main__ - INFO - [STOP] Shutting down MVP...
+2025-08-09 15:10:48,405 - collectors.log_collector - INFO - [COLLECTOR] Stopped log collector.

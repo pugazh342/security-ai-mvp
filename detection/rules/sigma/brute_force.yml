@@ -1,0 +1,19 @@
+# detection/rules/sigma/brute_force.yml
+title: Multiple Failed Login Attempts (Brute Force)
+id: 1a2b3c4d-5e6f-7g8h-9i10-j11k12l13m14
+status: experimental
+description: Detects multiple failed login attempts from the same IP within a short time.
+author: security-mvp
+date: 2025-08-09
+logsource:
+  category: authentication
+  product: custom-app
+detection:
+  selection:
+    event_type: failed_login
+  condition: selection | count() by ip > 3
+frequency:
+  time_window: 60s
+  threshold: 3
+level: high
+action: alert

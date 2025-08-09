@@ -1,0 +1,17 @@
+# config/config.yaml
+collector:
+  log_paths:
+    - "./logs/app.log"
+  watch_interval: 2
+
+detection:
+  sigma_rules_dir: "detection/rules/sigma/"
+  yara_rules_dir: "detection/rules/yara/"
+
+automation:
+  playbooks_enabled: true
+  response_delay_seconds: 5
+
+logging:
+  level: "INFO"
+  file: "logs/mvp.log"

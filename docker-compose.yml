@@ -1,0 +1,79 @@
+version: '3.8'
+
+services:
+  mvp-core:
+    build: .
+    container_name: security-mvp-core
+    volumes:
+      - ./logs:/app/logs
+    depends_on:
+      - grafana
+      - shuffle
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - security-net
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: security-mvp-grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana-storage:/var/lib/grafana
+      - ./dashboard/datasource.yaml:/etc/grafana/provisioning/datasources/simple-json.yaml
+    networks:
+      - security-net
+
+  shuffle:
+    image: fusioncenter/fusioncenter:latest
+    container_name: security-mvp-shuffle
+    ports:
+      - "3000:3000"
+    environment:
+      - POSTGRES_HOST=postgres
+      - POSTGRES_DB=shuffle
+      - POSTGRES_USER=shuffle
+      - POSTGRES_PASSWORD=shuffle_password
+      - REDIS_HOST=redis
+      - FC_URL=http://localhost:3000
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - security-net
+
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: shuffle
+      POSTGRES_USER: shuffle
+      POSTGRES_PASSWORD: shuffle_password
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - security-net
+
+  redis:
+    image: redis:6.0.9
+    networks:
+      - security-net
+
+  dashboard-api:
+    build: .
+    command: python dashboard/app.py
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mvp-core
+    networks:
+      - security-net
+
+networks:
+  security-net:
+
+volumes:
+  grafana-storage:
+  postgres-data:

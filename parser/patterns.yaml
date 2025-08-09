@@ -1,0 +1,17 @@
+patterns:
+  - name: auth_failed_login
+    regex: '(?P<timestamp>\\S+\\s+\\S+)\\s+(?P<host>\\S+)\\s+AUTH:\\s+Failed login for (?P<user>\\S+) from (?P<ip>\\S+)'
+    event_type: failed_login
+    severity: high
+  - name: auth_success_login
+    regex: '(?P<timestamp>\\S+\\s+\\S+)\\s+(?P<host>\\S+)\\s+AUTH:\\s+Login successful for user=(?P<user>\\S+)'
+    event_type: successful_login
+    severity: info
+  - name: privilege_escalation
+    regex: '(?P<timestamp>\\S+\\s+\\S+)\\s+(?P<host>\\S+)\\s+SECURITY:\\s+User (?P<user>\\S+) performed privilege escalation via (?P<method>\\S+)'
+    event_type: privilege_escalation
+    severity: critical
+  - name: generic_log
+    regex: '(?P<timestamp>\\S+\\s+\\S+)\\s+(?P<host>\\S+)\\s+(?P<component>\\S+):\\s+(?P<message>.*)'
+    event_type: generic_event
+    severity: info
